@@ -3,8 +3,7 @@ import CustomerProfile from "./CustomerProfile";
 
 function EachRowInSearchResults(props) {
   const [switchMe, setSwitchMe] = useState("off");
-  const setCustomerId = props.setCustomerId;
-  const setCustomerProfile = props.setCustomerProfile;
+
   function handleClick() {
     // if (switchMe === "off") {
     //   setSwitchMe("on");
@@ -15,8 +14,8 @@ function EachRowInSearchResults(props) {
 
   // const customerProfileText = "";
   function handleShowProfile() {
-    setCustomerId(props.booking.id);
-    setCustomerProfile("Customer Profile");
+    props.setCustomerId(props.booking.id);
+    props.setCustomerProfile("Customer Profile");
   }
 
   return (
