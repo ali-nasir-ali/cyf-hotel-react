@@ -9,14 +9,25 @@ const Bookings = () => {
   const search = (searchVal) => {
     console.info("TO DO!", searchVal);
   };
+  const [customerId, setCustomerId] = useState("test customer id state");
+  const [customerProfile, setCustomerProfile] = useState(
+    "test customer profile state"
+  );
 
   return (
     <div className="App-content">
       <div className="container">
         <Search search={search} />
         {/* <SearchResults results={FakeBookings} /> */}
-        <SearchResults booking={booking} />
-        <CustomerProfile />
+        <SearchResults
+          booking={booking}
+          setCustomerId={setCustomerId}
+          setCustomerProfile={setCustomerProfile}
+        />
+        <CustomerProfile
+          customerId={customerId}
+          customerProfile={customerProfile}
+        />
         {/* This component should receive one prop id */}
       </div>
     </div>

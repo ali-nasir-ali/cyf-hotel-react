@@ -5,8 +5,8 @@ function CustomerProfile(props) {
   return (
     <>
       <div>
-        {props.CustomerProfile}
-        {props.customerID}
+        <p>{props.CustomerProfile}</p>
+        <p>{props.customerID}</p>
       </div>
     </>
   );

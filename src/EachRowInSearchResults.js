@@ -3,28 +3,20 @@ import CustomerProfile from "./CustomerProfile";
 
 function EachRowInSearchResults(props) {
   const [switchMe, setSwitchMe] = useState("off");
-
+  const setCustomerId = props.setCustomerId;
+  const setCustomerProfile = props.setCustomerProfile;
   function handleClick() {
-    if (switchMe === "off") {
-      setSwitchMe("on");
-    } else {
-      setSwitchMe("off");
-    }
+    // if (switchMe === "off") {
+    //   setSwitchMe("on");
+    // } else {
+    //   setSwitchMe("off");
+    // }
   }
 
-  const [customerID, setCustomerId] = useState("");
   // const customerProfileText = "";
   function handleShowProfile() {
-    // When clicking on a "Show profile" button for a given row, //
-    //the component <CustomerProfile /> should display the text "Customer Profile",
-    //where is the id of the selected customer.
-    //Initially, the <CustomerProfile /> component doesn't show anything.//
-    return (
-      <CustomerProfile
-        customerProfileText="Customer Profile"
-        customerId={props.booking.id}
-      />
-    );
+    setCustomerId(props.booking.id);
+    setCustomerProfile("Customer Profile");
   }
 
   return (
