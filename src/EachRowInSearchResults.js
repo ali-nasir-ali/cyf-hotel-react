@@ -21,6 +21,9 @@ function EachRowInSearchResults(props) {
       <td>{props.booking.checkInDate}</td>
       <td>{props.booking.checkOutDate}</td>
       <td>{props.numberOfNights}</td>
+      <td>
+        <button className="btn btn-primary">Show Profile</button>
+      </td>
     </tr>
   );
 }
