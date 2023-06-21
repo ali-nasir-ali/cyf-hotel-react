@@ -17,6 +17,7 @@ const Bookings = () => {
         {/* <SearchResults results={FakeBookings} /> */}
         <SearchResults booking={booking} />
         <CustomerProfile />
+        {/* This component should receive one prop id */}
       </div>
     </div>
   );

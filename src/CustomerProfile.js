@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.css";
 
-function CustomerProfile() {
+function CustomerProfile(props) {
   return (
     <>
-      <div>Hello</div>
+      <div>
+        {props.CustomerProfile}
+        {props.customerID}
+      </div>
     </>
   );
 }
