@@ -16,9 +16,7 @@ const SearchResults = (props) => {
         booking={booking}
         numberOfNights={numberOfNights}
         setCustomerId={props.setCustomerId}
-        setCustomerProfile={props.setCustomerProfile}
-        setView={props.setView}
-        view={props.view}
+        customerId={props.customerId}
       />
     );
   });
@@ -36,6 +34,7 @@ const SearchResults = (props) => {
             <th scope="col">Check In Date</th>
             <th scope="col">Check Out Date</th>
             <th scope="col">Number Of Nights</th>
+            <th scope="col">Customer Profile</th>
           </tr>
         </thead>
 
