@@ -9,9 +9,9 @@ function CustomerProfile(props) {
       .then((data) => setCustomer(data));
   }, [props.customerId]);
   return (
-    <div className={props.view}>
+    <div>
       <div className="profile-container">
-        <p className="profile">{props.customerProfile}</p>
+        <p className="profile">Customer Profile</p>
         <p>ID: {props.customerId}</p>
         <p>Email: {customer.email}</p>
         <p>VIP: {customer.vip ? "Yes" : "No"}</p>

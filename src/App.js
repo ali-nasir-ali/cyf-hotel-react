@@ -5,17 +5,19 @@ import "./App.css";
 import Heading from "./Header";
 import Footer from "./Footer";
 import Restaurant from "./Restaurant";
+import UrlNotWorking from "./UrlNotWorking";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  if (count > 0) {
-    return <Bookings setCount={setCount} />;
+  const [pageHasError, setPageHasError] = useState(false);
+
+  if (pageHasError) {
+    return <UrlNotWorking />;
   }
   return (
     <div className="App">
       <Heading />
       <TouristInfoCards />
-      <Bookings setCount={setCount} />
+      <Bookings setPageHasError={setPageHasError} />
       <Restaurant />
       <Footer />
     </div>

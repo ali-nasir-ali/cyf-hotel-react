@@ -10,14 +10,15 @@ function EachRowInSearchResults(props) {
       setSwitchMe("off");
     }
   }
+  const customerProfileIsBeingShown = props.booking.id === props.customerId;
 
   function handleShowProfile() {
-    props.setCustomerId(props.booking.id);
-    props.setCustomerProfile("Customer Profile");
-    if (props.view === "viewOff") {
-      props.setView("viewOn");
+    //check here if the props.booking.id is same as customer id then setCustomerId=""
+    //this is for double
+    if (customerProfileIsBeingShown) {
+      props.setCustomerId("");
     } else {
-      props.setView("viewOff");
+      props.setCustomerId(props.booking.id);
     }
   }
 
@@ -34,7 +35,7 @@ function EachRowInSearchResults(props) {
       <td>{props.numberOfNights}</td>
       <td>
         <button onClick={handleShowProfile} className="btn btn-primary">
-          Show Profile
+          {customerProfileIsBeingShown ? "Hide profile" : "Show profile"}
         </button>
       </td>
     </tr>
